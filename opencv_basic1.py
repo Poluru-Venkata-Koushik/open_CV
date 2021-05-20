@@ -40,13 +40,12 @@ cv2.waitKey(0)
 
 
 img_bgr=cv2.imread('banana.jpg')
-cv2.imshow('original',img_bgr)
-cv2.waitKey(0)
 b,g,r=cv2.split(img_bgr)
 b-=20
 r-=20
 g-=20
 changed_rgb=cv2.merge([b,g,r])
+cv2.imshow('original',img_bgr)
 cv2.imshow('rgb',changed_rgb)
 cv2.waitKey(0)
-
+cv2.destroyAllWindows()
